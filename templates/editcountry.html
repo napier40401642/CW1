@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<h1>{{c['name']}}</h1>
+		<form action="/updateCountryName">
+		<div class='properties'>
+			<div>
+				<div>
+					<input name="name" type="hidden" value="{{c['name']}}">
+				</div>
+			</div>
+			<div>
+				<div>Capital</div>
+				<div><input name="capital" value="{{c['capital']}}"></div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><input name="continent" value="{{c['continent']}}"></div>
+			</div>
+			<div>
+				<div>Population (Millions)</div>
+				<div>{{"{:,.2f}".format(c['population']/1000000)}}</div>
+			</div>
+			<div>
+				<div>Area</div>
+				<div>{{c['area']}}</div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div>{{ "{:,.2f}".format(c['gdp']/1000000)}}</div>
+			</div>
+			<div>
+				<div>Top Level Domain</div>
+				<div>{{c['tld']}}</div>
+			</div>
+		<div>
+			<img src='/static/flags/{{c.tld}}.gif' class='big'> 
+		</div>
+		<!-- <div class='button'>
+			<a href="/delete/{{c.name}}">Delete</a>
+		</div> -->
+	</div>
+		<input type="submit" name="submit" value="Change">
+		
+		<div class="button">
+				<a href="/CountryName/{{c.name}}">Back</a>
+			</div>
+</form>
+	</body>
+</html>

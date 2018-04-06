@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<h1>World Factbook</h1>
+		<div>There are {{w|length}} countries in in the world.</div>
+		<ul>
+			{% for c in w %}
+			<li><a href='/CountryName/{{c.name}}'>
+				<img src='/static/flags/{{c["tld"]}}.gif' class='tiny'>
+			 {{c.name}}</a></li>
+			{% endfor %}
+		</ul>
+		<div class="allbutton">
+		{% if page_number==0 %}
+		<div class="allbutton">
+			<a href="/begin/{{page_number-page_size}}"><button type="button" disabled>Previous</button></a>
+		</div>
+		
+		{% else%}
+		<div class="allbutton">
+			<a href="/begin/{{page_number-page_size}}" ><button type="button" disabled>Previous</button></a>
+		</div>
+		
+		{% endif %}
+
+		{% if page_number>100 %}
+		<div class="allbutton">
+			<a href="/begin/{{page_number+page_size}}"><button type="button" disabled >Next Page</button></a>
+		</div>
+		{% else %}
+		<div class="allbutton">
+			<a href="/begin/{{page_number+page_size}}"><button type="button" disabled>Next Page</button></a>
+		</div>
+		{% endif %}
+		<div class="button">
+				<a href="/createCountry/{{c.name}}">Create</a>
+			</div>
+		</div>
+	</body>
+</html>

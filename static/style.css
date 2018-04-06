@@ -1,0 +1,110 @@
+body{
+	font-family: arial;
+	
+}
+img.big{
+	width: 260px;
+	border: solid thin black;
+	position: absolute;
+	left: 2ex;
+	top: 11ex;
+}
+
+img.tiny{
+	width: 25px;
+	border: solid thin black;
+}
+
+a{
+	text-decoration: none;
+}
+
+.properties
+{
+	padding-top: 24ex;	
+}
+.properties div div{
+	display: inline-block;
+	/*top: 97ex;*/
+	line-height: 30px;
+	margin-left: 1.2ex;
+}
+
+.properties div div:first-child
+{
+	width: 25ex;
+	font-weight: bold;
+
+}
+
+input[type=submit]
+{
+	border: solid thin black;
+	padding: 1px;
+	margin: 5px;
+	border-radius: 0.5ex;
+	width: 16ex;
+	height: 7px
+	text-align: center;
+	color: #2b3279;
+	font-weight: bold;
+	font-family: arial;
+	/*font-size: 15px;*/
+}
+
+.allbutton
+{
+	display: inline-block;	
+}
+
+
+.allbutton button
+{
+	display: inline-block;
+	border: solid thin black;
+	padding: 1ex;
+	margin: 1ex;
+	border-radius: 0.5ex;
+	width: 15ex;
+	text-align: center;
+	/*background:  #f8f9f9 ;
+	font-weight: bold;*/
+	
+}
+
+
+
+input {
+    width: 25ex;
+    height: 5ex;
+    margin: 8px 0;
+    padding-left: 5px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.button:hover
+{
+	background-color: #ddd;
+    color: black;
+}
+.button
+{
+	border: solid thin black;
+	padding: 0.7ex;
+	margin: 1ex;
+	border-radius: 0.5ex;
+	width: 13ex;
+	text-align: center;
+	display: inline-block;
+	background:  #eaeded ;
+	font-weight: bold;
+}
+
+ul li
+{
+	line-height: 30px;
+	
+}
+
