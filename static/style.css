@@ -15,6 +15,12 @@ img.tiny{
 	border: solid thin black;
 }
 
+.letters a.hover
+{
+	color:red;
+}
+
+
 a{
 	text-decoration: none;
 }
@@ -23,6 +29,7 @@ a{
 {
 	padding-top: 24ex;	
 }
+
 .properties div div{
 	display: inline-block;
 	/*top: 97ex;*/
@@ -36,7 +43,19 @@ a{
 	font-weight: bold;
 
 }
+.properties1 div div{
+	display: inline-block;
+	/*top: 97ex;*/
+	line-height: 30px;
+	margin-left: 1.2ex;
+}
 
+.properties1 div div:first-child
+{
+	width: 25ex;
+	font-weight: bold;
+
+}
 input[type=submit]
 {
 	border: solid thin black;

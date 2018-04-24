@@ -6,6 +6,12 @@
 </head>
 	<body>
 		<h1>World Factbook</h1>
+		<div class="letters">
+			{% for s in lota %}
+			<a href="/startletter/{{s}}">{{s}}</a>
+			{% endfor %}
+		</div>
+
 		<div>There are {{w|length}} countries in in the world</div>
 		<ul>
 			{% for c in w %}

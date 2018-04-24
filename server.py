@@ -3,6 +3,10 @@ import json
 
 page_number =10
 w = json.load(open("worldl.json"))
+lota=sorted(list(set([c['name'][0] for c in w])))
+
+
+
 for c in w:
     c['tld'] = c['tld'][1:]
 page_size = 20
@@ -14,7 +18,8 @@ app = Flask(__name__)
 def mainPage():
     l = len(w)
     return render_template('index.html',
-                           w=w[0:page_size],page_number=0,page_size=page_size,l=l)
+                           w=w[0:page_size],page_number=0,
+                           page_size=page_size,l=l,lota=lota)
 
 
 @app.route('/begin/<b>')
@@ -30,7 +35,7 @@ def beginPage(b):
 
 @app.route('/continent/<a>')
 def continentPage(a):
-    cl = [c for c in w if c['continent'] == a]
+    cl = [c for c in w if c['continent'] == a] 
     return render_template(
         'continent.html',
         length_of_cl=len(cl),
@@ -82,6 +87,7 @@ def updateCountryByNamePage():
             c = x
     c['capital']=request.args.get('capital')
     c['continent']=request.args.get('continent')
+    c['population']=request.args.get('population')
     return render_template(
         'country.html',
         c=c)
@@ -113,7 +119,15 @@ def deleteCountry(n):
         page_size=page_size,
         w=w[0:page_size])
 
-    
+@app.route('/startletter/<a>')
+def startLetterPage(a):
+    cl = [c for c in w if c['name'][0] == a] 
+    return render_template(
+        'letter.html',
+        length_of_cl=len(cl),
+        cl=cl,
+        a=a,
+        lota=lota)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5642,debug=True)
