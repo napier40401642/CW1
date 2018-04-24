@@ -17,7 +17,8 @@ img.tiny{
 
 .letters a.hover
 {
-	color:red;
+	color:black;
+	background-color: green;
 }
 
 
