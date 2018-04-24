@@ -1,18 +1,6 @@
-<!doctype html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-	
-</head>
-	<body>
-		<h1>World Factbook</h1>
-		<div class="letters">
-			{% for s in lota %}
-			<a href="/startletter/{{s}}">{{s}}</a>
-			{% endfor %}
-		</div>
-
-		<div>There are {{w|length}} countries in in the world</div>
+{% extends "alpha.html" %}
+		{% block content%}
+		<div><h3>There are {{w|length}} countries in in the world</h3></div>
 		<ul>
 			{% for c in w %}
 			<li><a href="/CountryName/{{c.name}}">
@@ -46,5 +34,4 @@
 			<a href="/createCountry/"><button type="button">Create</button></a>
 		</div>
 	</div>
-	</body>
-</html>
+	{% endblock %}

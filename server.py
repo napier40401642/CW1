@@ -40,13 +40,9 @@ def continentPage(a):
         'continent.html',
         length_of_cl=len(cl),
         cl=cl,
-        a=a
+        a=a, lota=lota
     )
 
-@app.route('/createCountry/')
-def createCountryPage():
-    c=None
-    return render_template('create.html',c=c)
 
 @app.route('/country/<i>')
 def countryPage(i):
@@ -91,6 +87,11 @@ def updateCountryByNamePage():
     return render_template(
         'country.html',
         c=c)
+
+@app.route('/createCountry/')
+def createCountryPage():
+    c=None
+    return render_template('create.html',c=c)
 
 @app.route('/NewCountry')
 def NewCountry():

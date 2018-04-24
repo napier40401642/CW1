@@ -1,13 +1,29 @@
 body{
 	font-family: arial;
 	
+
+	
 }
+
+/*#headig
+{
+	margin-left:10px;
+}*/
+#bd 
+{
+	/*border: 1px solid black;*/
+	width: 800px;
+	margin-left:480px;
+	padding-left: 50px;
+	/*background-image: url('/static/flags/bk.png');*/
+}
+
 img.big{
 	width: 260px;
 	border: solid thin black;
 	position: absolute;
-	left: 2ex;
-	top: 11ex;
+	margin-left:10px;
+	top: 40ex;
 }
 
 img.tiny{
@@ -15,12 +31,32 @@ img.tiny{
 	border: solid thin black;
 }
 
-.letters a.hover
+#letters a
 {
 	color:black;
-	background-color: green;
+	background: lavender;
+	text-align: center;
+  	border-radius: 6px;
+  	display: inline-block;
+  	height: 30px;
+  	padding-top: 4.5px;
+  	margin: 1px;
+  	position: relative;
+  	width: 27px;
+
 }
 
+#letters a:hover
+{
+	background-color:  #008080;
+}
+
+
+
+.letters
+{
+	align-content: center;
+}
 
 a{
 	text-decoration: none;
@@ -111,6 +147,7 @@ input {
 }
 .button
 {
+	color: black;
 	border: solid thin black;
 	padding: 0.7ex;
 	margin: 1ex;
@@ -120,6 +157,7 @@ input {
 	display: inline-block;
 	background:  #eaeded ;
 	font-weight: bold;
+
 }
 
 ul li

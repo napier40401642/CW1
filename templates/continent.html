@@ -4,6 +4,18 @@
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
 	<body>
+		<!-- <div class="headig">
+			<img src="/static/img/hdimg1.png" width="600ex">
+		</div>
+		<div class="bd">
+		<div class="letters">
+			{% for s in lota %}
+			<a href="/startletter/{{s}}">{{s}}</a>
+			{% endfor %}
+		</div> -->
+		{% extends "alpha.html" %}
+		{% block content%}
+			
 		<h1>{{a}}</h1>
 		<div>There are {{length_of_cl}} countries in {{a}}</div>
 		<ul>
@@ -13,5 +25,5 @@
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
-	</body>
-</html>
+		{% endblock %}
+	

@@ -1,9 +1,5 @@
-<!doctype html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-	<body>
+{% extends "alpha.html" %}
+		{% block content%}
 		<h1>{{c['name']}}</h1>
 		<div class='properties'>
 			<div>
@@ -42,8 +38,4 @@
 			<div class="button">
 				<a href="/EditCountryName/{{c.name}}">Edit</a>
 			</div>
-			
-			
-			
-	</body>
-</html>
+	{% endblock %}

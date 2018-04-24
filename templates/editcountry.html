@@ -1,9 +1,5 @@
-<!doctype html>
-<html>
-<head>
-	<link rel='stylesheet' href='/static/style.css'>
-</head>
-	<body>
+{% extends "alpha.html" %}
+		{% block content%}
 		<h1>{{c['name']}}</h1>
 		<form action="/updateCountryName">
 		<div class='properties'>
@@ -49,5 +45,4 @@
 				<a href="/CountryName/{{c.name}}">Back</a>
 			</div>
 </form>
-	</body>
-</html>
+	{% endblock %}

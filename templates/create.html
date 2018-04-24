@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel='stylesheet' href='/static/style.css'>
-</head>
-<body>
+{% extends "alpha.html" %}
+		{% block content%}
   <form action="/NewCountry">
 	<h1>Create New Country</h1>
 		<div class='properties1'>
@@ -48,8 +42,9 @@
 		</div>
 
 		<input type="submit" value="Create">
+		<div class="button">
+				<a href="/">Back</a>
+			</div>
 		</form>
 
-
-</body>
-</html>
+	{% endblock %}
