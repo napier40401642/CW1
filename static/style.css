@@ -23,7 +23,7 @@ img.big{
 	border: solid thin black;
 	position: absolute;
 	margin-left:10px;
-	top: 45ex;
+	top: 54ex;
 }
 
 img.tiny{
@@ -37,12 +37,13 @@ img.tiny{
 	background: lavender;
 	text-align: center;
   	border-radius: 6px;
-  	display: inline-block;
+ /* 	display: inline-block;*/
   	height: 30px;
   	padding-top: 4.5px;
   	margin: 1px;
+  
   	position: relative;
-  	width: 26px;
+  	width: 25px;
 
 }
 
@@ -56,6 +57,7 @@ img.tiny{
 .letters
 {
 	align-content: center;
+	margin-top: 50ex;
 }
 
 a{
@@ -64,7 +66,7 @@ a{
 
 .properties
 {
-	padding-top: 24ex;	
+	padding-top: 30ex;	
 }
 
 .properties div div{

@@ -5,7 +5,8 @@ page_number =10
 w = json.load(open("worldl.json"))
 lota=sorted(list(set([c['name'][0] for c in w])))
 
-
+con= sorted(list(set([c['continent'] for c in w])))
+print(con)
 
 for c in w:
     c['tld'] = c['tld'][1:]
