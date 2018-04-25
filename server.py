@@ -83,7 +83,7 @@ def updateCountryByNamePage():
             c = x
     c['capital']=request.args.get('capital')
     c['continent']=request.args.get('continent')
-    c['population']=request.args.get('population')
+   
     return render_template(
         'country.html',
         c=c)

@@ -1,6 +1,6 @@
 {% extends "alpha.html" %}
 		{% block content%}
-		<div><h3>There are {{w|length}} countries in in the world</h3></div>
+		<div><h3>There are {{w|length}} countries</h3></div>
 		<ul>
 			{% for c in w %}
 			<li><a href="/CountryName/{{c.name}}">

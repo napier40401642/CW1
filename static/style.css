@@ -13,7 +13,7 @@ body{
 {
 	/*border: 1px solid black;*/
 	width: 800px;
-	margin-left:480px;
+	margin-left:400px;
 	padding-left: 50px;
 	/*background-image: url('/static/flags/bk.png');*/
 }
@@ -23,7 +23,7 @@ img.big{
 	border: solid thin black;
 	position: absolute;
 	margin-left:10px;
-	top: 40ex;
+	top: 45ex;
 }
 
 img.tiny{
@@ -42,7 +42,7 @@ img.tiny{
   	padding-top: 4.5px;
   	margin: 1px;
   	position: relative;
-  	width: 27px;
+  	width: 26px;
 
 }
 
@@ -143,7 +143,7 @@ input {
 .button:hover
 {
 	background-color: #ddd;
-    color: black;
+ 
 }
 .button
 {
