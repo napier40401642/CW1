@@ -12,7 +12,7 @@ body{
 #bd 
 {
 	/*border: 1px solid black;*/
-	width: 800px;
+	width: 900px;
 	margin-left:400px;
 	padding-left: 50px;
 	/*background-image: url('/static/flags/bk.png');*/
@@ -31,25 +31,42 @@ img.tiny{
 	border: solid thin black;
 }
 
+#left
+{
+	float: left;
+}
+
+#right
+{
+	/*float: right;*/
+	 position: absolute;
+  	top: 45%;
+  	left: 60%;
+  	transform: translate(-50%,-50%);
+}
+
+
 #letters a
 {
 	color:black;
 	background: lavender;
 	text-align: center;
   	border-radius: 6px;
- /* 	display: inline-block;*/
+  	display: inline-block;
   	height: 30px;
   	padding-top: 4.5px;
   	margin: 1px;
-  
   	position: relative;
-  	width: 25px;
+  	width: 26px;
 
 }
+
 
 #letters a:hover
 {
 	background-color:  #008080;
+	text-decoration: none;
+	color: white;
 }
 
 
@@ -57,8 +74,31 @@ img.tiny{
 .letters
 {
 	align-content: center;
-	margin-top: 50ex;
+	margin-top: 50ex
 }
+
+.continentbox a
+{
+	color:black;
+	background: lavender;
+	text-align: center;
+  	border-radius: 6px;
+  	display: inline-block;
+  	height: 30px;
+  	padding-top: 4.5px;
+  	margin: 1px;
+  	position: relative;
+  	width: 100px;
+
+}
+
+.continentbox a:hover
+{
+	background-color:  #008080;
+	text-decoration: none;
+	color: white;
+}
+
 
 a{
 	text-decoration: none;
@@ -87,6 +127,8 @@ a{
 	/*top: 97ex;*/
 	line-height: 30px;
 	margin-left: 1.2ex;
+	margin: 5px;
+	text-decoration: none;
 }
 
 .properties1 div div:first-child
@@ -112,7 +154,8 @@ input[type=submit]
 
 .allbutton
 {
-	display: inline-block;	
+	display: inline-block;
+	text-decoration: none;
 }
 
 
@@ -127,6 +170,7 @@ input[type=submit]
 	text-align: center;
 	/*background:  #f8f9f9 ;
 	font-weight: bold;*/
+	text-decoration: none;
 	
 }
 
@@ -145,6 +189,7 @@ input {
 .button:hover
 {
 	background-color: #ddd;
+	
  
 }
 .button
@@ -159,6 +204,7 @@ input {
 	display: inline-block;
 	background:  #eaeded ;
 	font-weight: bold;
+
 
 }
 

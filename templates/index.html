@@ -3,7 +3,7 @@
 		<div><h3>There are {{w|length}} countries</h3></div>
 		<ul>
 			{% for c in w %}
-			<li><a href="/CountryName/{{c.name}}">
+			<li><a href="/CountryName/{{c.name}}" style="text-decoration: none;">
 			<img src='/static/flags/{{c.tld}}.gif' class='tiny'> {{c.name}}</a></li>
 			{% endfor %}
 		</ul>

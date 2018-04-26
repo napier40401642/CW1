@@ -3,8 +3,7 @@ import json
 
 page_number =10
 w = json.load(open("worldl.json"))
-lota=sorted(list(set([c['name'][0] for c in w])))
-
+alpha=sorted(list(set([c['name'][0] for c in w])))
 con= sorted(list(set([c['continent'] for c in w])))
 print(con)
 
@@ -20,7 +19,7 @@ def mainPage():
     l = len(w)
     return render_template('index.html',
                            w=w[0:page_size],page_number=0,
-                           page_size=page_size,l=l,lota=lota)
+                           page_size=page_size,l=l,alpha=alpha,con=con)
 
 
 @app.route('/begin/<b>')
@@ -30,7 +29,7 @@ def beginPage(b):
     return render_template('index.html',
                            w=w[bn:bn + page_size],
                            page_number=bn,
-                           page_size=page_size,l=l,lota=lota
+                           page_size=page_size,l=l,alpha=alpha,con=con
                            )
 
 
@@ -41,7 +40,7 @@ def continentPage(a):
         'continent.html',
         length_of_cl=len(cl),
         cl=cl,
-        a=a, lota=lota
+        a=a,con=con
     )
 
 
@@ -105,7 +104,7 @@ def NewCountry():
     c['gdp'] = int(request.args.get('gdp'))
     c['tld']=request.args.get('tld')
     w.append(c)
-    return render_template('newcountry.html',c=c)
+    return render_template('country.html',c=c)
 
 @app.route('/delete/<n>')
 def deleteCountry(n):
@@ -129,7 +128,7 @@ def startLetterPage(a):
         length_of_cl=len(cl),
         cl=cl,
         a=a,
-        lota=lota)
+        alpha=alpha)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5642,debug=True)

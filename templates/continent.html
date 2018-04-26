@@ -10,7 +10,13 @@
 		</div> -->
 		{% extends "header.html" %}
 		{% block content%}
-			
+		<div class="continentbox">
+			{% for c in con %}
+			<a href="/continent/{{c}}">{{c}}</a>
+			{% endfor %}
+		</div>
+		
+		<div id="left">	
 		<h1>{{a}}</h1>
 		<div>There are {{length_of_cl}} countries in {{a}}</div>
 		<ul>
@@ -20,5 +26,9 @@
 			 {{c.name}}</a></li>
 			{% endfor %}
 		</ul>
+	</div>
+
+  </div>
+	</div>
 		{% endblock %}
 	
