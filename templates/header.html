@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+	<link href ="{{url_for('static', filename ='bootstrap37/css/bootstrap.min.css')}}" rel="stylesheet"/>
+	<style>
+		body
+		{
+			padding-top: 50px;
+		}
+		.navbar-fixed-top
+		{
+			width: 119ex;
+			margin-left: 62ex;
+			background-color: lavender;
+		}
+		ul li a
+		{
+			color: black;
+		}
+	</style>
+</head>
+	<body>
+		<div id="bd">
+		<div id="headig">
+				<img src="/static/img/hdimg1.png" width="850ex">
+		</div>
+		<div>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+			<!-- <div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" 
+			data-toggle="collapse" data-target="#navbar" 
+			aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				
+			</div> -->
+			<div id="navbar" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/continent/Asia">Continent</a></li>
+				<li><a href="/startletter/A">Country by Alphabet</a></li>
+			</ul>
+			</div>
+		</nav>
+		<script src="{{url_for('static',filename ='bootstrap37/js/bootstrap.min.js')}}"></script>
+	</div>
+		<div id="letters">
+			<h4>
+			{% for s in alpha %}
+			<a href="/startletter/{{s}}">{{s}}</a>
+			{% endfor %}
+			
+			</h4>
+		</div>
+		
+		<div>
+			{% block content%}
+			{% endblock %}
+		</div>
+	</div>
+</body>
+</html>
