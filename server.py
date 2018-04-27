@@ -104,7 +104,7 @@ def NewCountry():
     c['gdp'] = int(request.args.get('gdp'))
     c['tld']=request.args.get('tld')
     w.append(c)
-    return render_template('country.html',c=c)
+    return render_template('newcountry.html',c=c)
 
 @app.route('/delete/<n>')
 def deleteCountry(n):
@@ -118,7 +118,7 @@ def deleteCountry(n):
         'index.html',
         page_number=0,
         page_size=page_size,
-        w=w[0:page_size])
+        w=w[0:page_size],alpha=alpha)
 
 @app.route('/startletter/<a>')
 def startLetterPage(a):

@@ -1,34 +1,22 @@
 
-		<!-- <div class="headig">
-			<img src="/static/img/hdimg1.png" width="600ex">
-		</div>
-		<div class="bd">
-		<div class="letters">
-			{% for s in lota %}
-			<a href="/startletter/{{s}}">{{s}}</a>
-			{% endfor %}
-		</div> -->
-		{% extends "header.html" %}
-		{% block content%}
+{% extends "header.html" %}
+	{% block content%}
 		<div class="continentbox">
 			{% for c in con %}
 			<a href="/continent/{{c}}">{{c}}</a>
 			{% endfor %}
 		</div>
 		
-		<div id="left">	
-		<h1>{{a}}</h1>
-		<div>There are {{length_of_cl}} countries in {{a}}</div>
-		<ul>
-			{% for c in cl %}
-			<li><a href='/CountryName/{{c.name}}'>
-				<img src='/static/flags/{{c.tld}}.gif' class='tiny'>
-			 {{c.name}}</a></li>
-			{% endfor %}
-		</ul>
-	</div>
-
-  </div>
-	</div>
-		{% endblock %}
+		<div>	
+			<h1>{{a}}</h1>
+			<div>There are {{length_of_cl}} countries in {{a}}</div>
+			<ul>
+				{% for c in cl %}
+					<li><a href='/CountryName/{{c.name}}'>
+					<img src='/static/flags/{{c.tld}}.gif' class='tiny'>
+			 		{{c.name}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	{% endblock %}
 	

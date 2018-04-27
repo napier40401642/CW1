@@ -5,17 +5,12 @@ body{
 	
 }
 
-/*#headig
-{
-	margin-left:10px;
-}*/
+
 #bd 
 {
-	/*border: 1px solid black;*/
 	width: 900px;
-	margin-left:400px;
+	margin-left:50ex;
 	padding-left: 50px;
-	/*background-image: url('/static/flags/bk.png');*/
 }
 
 img.big{
@@ -31,19 +26,6 @@ img.tiny{
 	border: solid thin black;
 }
 
-#left
-{
-	float: left;
-}
-
-#right
-{
-	/*float: right;*/
-	 position: absolute;
-  	top: 45%;
-  	left: 60%;
-  	transform: translate(-50%,-50%);
-}
 
 
 #letters a
@@ -124,7 +106,6 @@ a{
 }
 .properties1 div div{
 	display: inline-block;
-	/*top: 97ex;*/
 	line-height: 30px;
 	margin-left: 1.2ex;
 	margin: 5px;
@@ -149,7 +130,6 @@ input[type=submit]
 	color: #2b3279;
 	font-weight: bold;
 	font-family: arial;
-	/*font-size: 15px;*/
 }
 
 .allbutton
@@ -196,10 +176,11 @@ input {
 {
 	color: black;
 	border: solid thin black;
-	padding: 0.7ex;
+	padding: 1ex;
 	margin: 1ex;
 	border-radius: 0.5ex;
-	width: 13ex;
+	width: 16ex;
+	height: 40px;
 	text-align: center;
 	display: inline-block;
 	background:  #eaeded ;

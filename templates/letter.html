@@ -1,11 +1,6 @@
 {% extends "header.html" %}
-		{% block content%}
+	{% block content%}
 		<h1>{{a}}</h1>
-		<!-- <div class="letter1">
-			{% for s in lota %}
-			<a href="/startletter/{{s}}">{{s}}</a>
-			{% endfor %}
-		</div> -->
 		<div>There are {{length_of_cl}} countries start with letter {{a}}</div>
 		<ul>
 			{% for c in cl %}
